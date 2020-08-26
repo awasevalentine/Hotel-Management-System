@@ -1,0 +1,38 @@
+<nav class="navbar fixed-top navbar-expand-lg navbar-bold bg-dark">
+  <button  class="navbar-toggler btn-navbar" type="button" data-toggle="collapse" data-target="#navbarCollapse">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item view-rooms-wrapper">
+        <a class="nav-link" [routerLink] = "['/']">Home</a>
+    </li>
+      <li class="nav-item reservation-wrapper">
+        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Book Reservation</a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" [routerLink] = "['/luxury']">Luxury Room</a>
+          <a class="dropdown-item" [routerLink] = "['/miniLuxury']">Mini Luxury</a>
+          <a class="dropdown-item" [routerLink] = "['/singleRoom']">Single Room</a>
+
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item"[routerLink] = "['/conferenceRoom']">Conference Room</a>
+        </div>
+      </li>
+      <li class="nav-item view-rooms-wrapper">
+          <a class="nav-link" [routerLink] = "['/rooms']">Our Rooms</a>
+      </li>
+      <li class="nav-item services-wrapper">
+        <a class="nav-link Galary" [routerLink] = "['/gallary']">View Gallary</a>
+      </li>
+      <li class="nav-item about-wrapper">
+        <a class="nav-link about-us" [routerLink] = "['/contactUs']">Contact Us</a>
+      </li>
+      <li class="nav-item about-wrapper">
+        <a class="nav-link about-us" [routerLink] = "['/aboutUs']">About Us</a>
+      </li>
+    </ul>
+    </div>
+</nav>

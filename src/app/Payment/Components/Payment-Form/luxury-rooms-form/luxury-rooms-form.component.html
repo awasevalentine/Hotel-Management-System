@@ -1,0 +1,77 @@
+<div class="main-content-wrapper">
+  <div class="sub-content-wrapper">
+  <div class="card payment-content">
+    <div class="header">
+      <p class="card-title description">Please fill in your details</p>
+
+    </div>
+    <div class="payment-card-wrapper">
+        <form [formGroup]="luxForm" method="POST" action="reservation" id="reservation" name="reservation">
+          <div class="card-body">
+        <div class="form-row">
+        <div class="form-group col-md-6">
+        <label for="checkIn">Check-in Date</label>
+        <input type="date" id="checkInDate" class="form-control" name="checkInDate" formControlName="checkInDate">
+        <mat-error *ngIf='this.luxForm.get("checkInDate")'>{{checkInDateErrorMessage()}}</mat-error>
+      </div>
+          <div class="form-group col-md-6">
+            <label for="checkOut">Check-Out Date</label>
+            <input type="date" class="form-control" id="checkOutDate" name="checkOutDate" formControlName="checkOutDate">
+            <mat-error *ngIf = 'this.luxForm.get("checkOutDate")'>{{checkOutDateErrorMessage()}}</mat-error>
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-2">
+
+            <label for="title">Title</label>
+            <select class="form-control" id="title" name="title" formControlName="title">
+              <option *ngFor = "let title of titles" [value] = "title">{{title}}</option>
+            </select>
+        </div>
+        <div class="col-md-5 mb-3">
+            <label>First Name</label>
+            <input  type="text" class="form-control" id="firstName" name="firstName" formControlName="firstName">
+            <mat-error class="text-danger" *ngIf = 'this.luxForm.get("firstName")'>{{firstNameErrorMessage()}}</mat-error>
+          </div>
+        <div class="col-md-5">
+
+            <label>Last Name</label>
+            <input  type="text" class="form-control" id="lastName" name="lastName" formControlName="lastName">
+            <mat-error *ngIf = 'this.luxForm.get("lastName")'>{{lastNameErrorMessage()}}</mat-error>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label>Country</label>
+            <select class="form-control" name="country" formControlName = "country" id="country">
+              <option *ngFor = "let country of countries" [value] = "country">{{country}}<option>
+            </select>
+            <mat-error *ngIf = 'this.luxForm.get("country")'>{{countryErrorMessage()}}</mat-error>
+        </div>
+        <div class="col-md-3 mb-3">
+            <label>Phone No</label>
+            <input  type="text" class="form-control" id="phoneNo" name="phoneNo" formControlName="phoneNo">
+            <mat-error *ngIf = 'this.luxForm.get("phoneNo").invalid'>{{phoneNoErrorMessage()}}</mat-error>
+        </div>
+        <div class="col-md-6">
+
+            <label>Email</label>
+            <input type="email" class="form-control" id="email" name="email" formControlName="email">
+            <mat-error *ngIf = 'this.luxForm.get("email")'>{{emailErrorMessage()}}</mat-error>
+        </div>
+        <div class="col-md-8">
+
+            <textarea type="text" class="form-control" id="additionalRequest" name="additionalRequest" rows="2" formControlName="additionalRequest" placeholder="please enter any additional request"></textarea>
+
+        </div>
+      </div>
+      <div class="btn-wrapper">
+        <button class="btn btn-primary" (click) = "payAtHotel()"> Pay at Hotel</button>
+      </div>
+      <div class="btn-wrapper">
+        <button type ="submit" class="btn btn-success" (click) = "payNow()"> Pay Now</button>
+      </div>
+    </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  </div>

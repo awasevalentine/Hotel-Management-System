@@ -1,0 +1,19 @@
+<div class="main-home-content">
+  <div class="Welcome">
+    <h1 class="card-title top-header">
+      Welcome to Barrondy Hotel
+    </h1>
+    <div class="card">
+        <form #bookNowForm="ngForm">
+      <div class="input-fields">
+        <select class="form-control" id="roomType"  name="roomType" [(ngModel)]='bookNow.roomType'>
+          <option value=""> Select Room Type</option>
+          <option *ngFor = "let rooms of roomTypes" [value] = "rooms">{{rooms}}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-dark" (click) ='booking()'>Book Now</button>
+    </form>
+    </div>
+    </div>
+
+</div>

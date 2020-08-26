@@ -1,0 +1,67 @@
+  <div class="paynow-wrapper">
+  <div class="card main-content-card">
+  <div *ngFor="let details of reservationDetails">
+  <div class="row reservation-date-wrapper">
+    <div class="col-sm-4">
+      <label class="daysInHotel" style="padding-top: 1em;">Check-In Date</label>
+      <br>
+      {{details.checkInDate | date: 'dd/MM/yyyy'}}
+    </div>
+
+    <div class="col-sm-4">
+      <label class="daysInHotel2">Days in Hotel</label>
+      <br><p class="days"> {{details.daysInHotel}} </p>
+    </div>
+
+    <div class="col-sm-4">
+      <label class="daysInHotel" style="padding-top: 1em;"> Check-Out Date</label>
+      <br>
+      {{details.checkOutDate | date: 'dd/MM/yyyy'}}
+    </div>
+  </div>
+  <div class="sub-head">
+    <p class="text-descriptionz" style="padding-top: 4em; margin: 2em;">
+      Hi {{details.title}} {{details.firstName}} {{details.lastName}},
+      <br>To complete your reservation kindly click on the button below to select a payment method.
+    </p>
+    <hr class="hz-line" style="border: 1px solid black;">
+
+  </div>
+  <div class="payment-option">
+    <div class="row">
+      <div class="col-6">
+        <div class="paystack-button">
+        <p> {{title}}</p>
+          <angular4-paystack
+            [email]="details.email"
+            (paymentInit)="paymentInit()"
+            [amount]="details.amountPaid*100" [ref]="tRef"
+            (close)="paymentCancel()"
+            (callback)="paymentDone($event)"
+            class="btn btn-info"
+          >
+            Pay With Paystack
+          </angular4-paystack>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<div>
+	<ng-template #paymentSuccessModelTemplate>
+	<div class="modal-wrapper">
+		<h1 class="icon-wrapper"><i class="fa fa-check-square"></i></h1>
+   <h2 mat-dialog-title> Awesome!</h2>
+  <p mat-mat-dialog-content> Your reservation has been confirmed.
+	Check your email for detials.
+  </p>
+  <div mat-dialog-actions>
+	<button mat-button mat-dialog-close class="btn btn-success btn1">Ok</button>
+  </div>
+  </div>
+	</ng-template>
+  </div>
+

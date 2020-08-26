@@ -1,0 +1,7 @@
+.center-align{
+  display: flex;
+  justify-content: center;
+  padding-top: 15em;
+  padding-bottom: 15em;
+  height: 100%;
+}

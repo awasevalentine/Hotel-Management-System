@@ -1,0 +1,63 @@
+.footer-wrapper{
+  font-size: 14px;
+  font-family: Spectral, Roboto;
+  background-color: silver;
+  color: black;
+  overflow-x: hidden;
+}
+.contact-wrapper{
+  padding-left: 1.3em;
+  height: 5%;
+}
+.row-wrapper{
+  display: flex;
+  flex-direction: column;
+}
+.heads{
+  font-size: 18px;
+  font-family: Roboto, Spectral, Arial, Helvetica, sans-serif;
+}
+.main-content-wrapper{
+  font-family: spectral, roboto, Georgia, Times, 'Times New Roman', serif;
+  font-size: 16px;
+  height: 100%;
+}
+.footer-headers{
+  background-color: rgb(14, 14, 66);
+  height: 50px;
+  width: 100%;
+  color: white;
+  display: inline-flex;
+  flex-direction: row;
+  padding-left: 1em;
+  padding-top: .5em;
+}
+.header-content{
+  display:inline-flex;
+  flex-wrap: wrap;
+  height: 80px;
+  padding-top: .7em;
+
+
+}
+.social-medial{
+  display: grid;
+  grid-template-columns: 10px 10px 10px 10px;
+  padding-left: 1em;
+
+}
+
+.header-content{
+  display: flex;
+  justify-content: center;
+}
+.contact-us{
+  display: flex;
+  justify-content: center;
+}
+
+
+.care-line{
+padding-bottom: 1em;
+padding-top: -2em;
+}

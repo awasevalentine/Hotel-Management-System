@@ -1,0 +1,36 @@
+.main-content-wrapper{
+  background-color: indigo;
+}
+
+.sub-content-wrapper{
+  display: flex;
+  justify-content: center;
+  padding-top: 4em;
+  padding-bottom: 4em;
+  height: 30%;
+}
+.payment-content{
+  padding-top: 1em;
+  width: 60%;
+  display: flex;
+  font-size: 14px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.payment-card-wrapper{
+}
+
+
+.btn{
+  width: 100%;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+.btn-wrapper{
+  padding-top: 1em;
+  padding-bottom: .6em;
+}
+.description{
+  font-size: 25px;
+  text-align: center;
+}
+

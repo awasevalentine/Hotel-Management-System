@@ -1,0 +1,55 @@
+@media screen and (min-width: 360px){
+.main-home-content{
+  overflow-x: hidden;
+}
+.Welcome{
+  padding-top:3em;
+  background-color: grey;
+  background-image: url(../../../../assets/images/people.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: auto;
+  height: 600px;
+  padding-left: .5em;
+  margin: 0px;
+  -webkit-box-pack: center;
+  z-index: 100px;
+  background-position-x: center;
+  background-blend-mode: normal;
+  background-origin: content-box;
+
+
+}
+.top-header{
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card{
+  width: 180px;
+  padding-top: 0em;
+  background-color: teal;
+  color:black;
+}
+.form-control{
+  background-color: rgba(160, 62, 45, 0);
+  color: black;
+}
+.btn{
+  width: 180px;
+  text-align: center;
+  background-color: rgb(14, 14, 66);
+  padding-top: 5px;
+}
+.labels{
+  display: flex;
+  justify-content: center;
+}
+}
+

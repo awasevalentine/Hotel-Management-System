@@ -1,0 +1,34 @@
+.mywrapper{
+  padding-top: 3em;
+  background-color: silver;
+  image-orientation: from-image;
+  image-rendering: pixelated;
+  shape-image-threshold: inherit;
+  border-image-outset: 50%;
+}
+
+div.carousel-inner{
+  height: 600px;
+
+}
+.carousel-item{
+
+}
+.d-block{
+  height: 600px;
+  shape-image-threshold: inherit;
+  background-size: contain;
+}
+.myImage{
+
+  image-rendering: optimizeQuality;
+  shape-image-threshold: inherit;
+  background-size: contain;
+}
+.fill{
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
